@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even G2 Hello World - Spatial Display Demo</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7); /* Simuloi lasien läpinäkyvää taustaa */
+            font-family: Arial, sans-serif;
+            color: #00ff00; /* Vihreä monochrome kuten Even G2:n näyttö */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #overlay {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 48px;
+            text-align: center;
+            pointer-events: none; /* Ei häiritse vuorovaikutusta */
+            text-shadow: 0 0 10px #00ff00;
+            animation: fadeIn 2s ease-in;
+        }
+        #notification {
+            position: fixed;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 32px;
+            opacity: 0.8;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">Hello Even G2!<br>Spatial Experience Demo</div>
+    <div id="notification">Pilot Program Application in Progress 🚀</div>
+
+    <script>
+        // Simuloi dynaamista päivitystä (esim. ilmoitus tai käännös)
+        setTimeout(() => {
+            document.getElementById('overlay').innerHTML = 'Tervetuloa Even Hubiin!<br>Rakentamassa tulevaisuutta';
+        }, 5000);
+
+        // Lisää myöhemmin SDK-kutsu täällä, kun saat pääsyn
+        console.log('Valmis Even Hub SDK:ta varten – apply now!');
+    </script>
+</body>
+</html>
